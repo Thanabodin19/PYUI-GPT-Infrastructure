@@ -21,6 +21,7 @@ sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plug
 # Enable and start Docker
 echo "🔧 Enabling and starting Docker service..."
 sudo systemctl enable --now docker
+newgrp docker
 sudo usermod -aG docker $USER
 
 # Install KinD
