@@ -1,0 +1,65 @@
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+name: PYUI-GPT
+nodes:
+  - role: control-plane
+    kubeadmConfigPatches:
+      - |
+        kind: InitConfiguration
+        nodeRegistration:
+          kubeletExtraArgs:
+            node-labels: "node=control-plane-1"
+    extraMounts:
+      - hostPath: ./data
+        containerPath: /tmp/data
+  - role: control-plane
+    kubeadmConfigPatches:
+      - |
+        kind: JoinConfiguration
+        nodeRegistration:
+          kubeletExtraArgs:
+            node-labels: "node=control-plane-2"
+    extraMounts:
+      - hostPath: ./data
+        containerPath: /tmp/data
+  - role: control-plane
+    kubeadmConfigPatches:
+      - |
+        kind: JoinConfiguration
+        nodeRegistration:
+          kubeletExtraArgs:
+            node-labels: "node=control-plane-3"
+    extraMounts:
+      - hostPath: ./data
+        containerPath: /tmp/data
+
+  - role: worker
+    kubeadmConfigPatches:
+      - |
+        kind: JoinConfiguration
+        nodeRegistration:
+          kubeletExtraArgs:
+            node-labels: "node=worker-1"
+    extraMounts:
+      - hostPath: ./data
+        containerPath: /tmp/data
+  - role: worker
+    kubeadmConfigPatches:
+      - |
+        kind: JoinConfiguration
+        nodeRegistration:
+          kubeletExtraArgs:
+            node-labels: "node=worker-2"
+    extraMounts:
+      - hostPath: ./data
+        containerPath: /tmp/data
+  - role: worker
+    kubeadmConfigPatches:
+      - |
+        kind: JoinConfiguration
+        nodeRegistration:
+          kubeletExtraArgs:
+            node-labels: "node=worker-3"
+    extraMounts:
+      - hostPath: ./data
+        containerPath: /tmp/data
