@@ -2,7 +2,7 @@ domain: grafana-k8s.pyui-gpt.com
 domain1: alm.pyui-gpt.com
 domain2: prom.pyui-gpt.com
 
-environment: production
+environment: main
 
 kube-prometheus-stack:
   grafana:
