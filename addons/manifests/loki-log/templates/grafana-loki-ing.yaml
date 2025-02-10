@@ -6,10 +6,10 @@ metadata:
     nginx.ingress.kubernetes.io/backend-protocol: HTTP  
     kubernetes.io/ingress.class: "nginx"
 spec:
-  tls:
-    - hosts:
-      - {{ .Values.domain }}
-      secretName: grafana-loki-cert
+  # tls:
+  #   - hosts:
+  #     - {{ .Values.domain }}
+  #     secretName: grafana-loki-cert
   rules:
     - host: {{ .Values.domain }}
       http:
