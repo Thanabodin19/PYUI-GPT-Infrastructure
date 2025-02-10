@@ -1,12 +1,6 @@
 apiVersion: cert-manager.io/v1
-kind: Certificate
+kind: ClusterIssuer
 metadata:
-  name: argocd-cert
+  name: selfsigned-issuer
 spec:
-  secretName: argocd-cert
-  dnsNames:
-    - {{ .Values.domain }}
-  issuerRef:
-    name: lets-encrypt-issuer-prod
-    kind: ClusterIssuer
-    group: cert-manager.io
+  selfSigned: {}

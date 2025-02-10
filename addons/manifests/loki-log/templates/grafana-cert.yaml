@@ -7,6 +7,6 @@ spec:
   dnsNames:
     - {{ .Values.domain }}
   issuerRef:
-    name: lets-encrypt-issuer-prod
+    name: selfsigned-issuer
     kind: ClusterIssuer
     group: cert-manager.io
