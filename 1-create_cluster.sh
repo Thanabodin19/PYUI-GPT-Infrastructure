@@ -1,11 +1,10 @@
 #!/bin/bash
 
-# กำหนดสี
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 WARNING='\033[0;33m'
 BLUE='\033[0;34m'
-NC='\033[0m' # ไม่มีสี (reset)
+NC='\033[0m' 
 
 # ตรวจสอบว่า kind ถูกติดตั้งแล้วหรือยัง
 if ! command -v kind &> /dev/null

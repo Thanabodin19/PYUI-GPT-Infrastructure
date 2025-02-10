@@ -1,0 +1,8 @@
+domain: grafana-loki.pyui-gpt.com
+
+loki-stack:
+  grafana:
+    grafana.ini:
+      server:
+        root_url: https://grafana-loki.pyui-gpt.com
+        domain: grafana-loki.pyui-gpt.com

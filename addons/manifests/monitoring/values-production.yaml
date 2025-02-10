@@ -1,0 +1,15 @@
+domain: grafana-k8s.pyui-gpt.com
+domain1: alm.pyui-gpt.com
+domain2: prom.pyui-gpt.com
+
+environment: production
+
+kube-prometheus-stack:
+  grafana:
+    grafana.ini:
+      server:
+        root_url: grafana-k8s.pyui-gpt.com
+    grafana.ini:
+      server:
+        root_url: https://grafana-k8s.pyui-gpt.com
+        domain: grafana-k8s.pyui-gpt.com

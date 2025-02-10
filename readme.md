@@ -1,7 +1,7 @@
 # PYUI-GPT-Infrastructure
 
 ## 0. Setup Tools
-### install tools
+### install tools (only linux)
 - Docker 🐳
 - KinD (Kubernetes in Docker) 🪼
 - k9s 🐶
