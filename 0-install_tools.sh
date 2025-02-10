@@ -46,12 +46,21 @@ curl -LO "https://dl.k8s.io/release/${KUBECTL_VERSION}/bin/linux/amd64/kubectl"
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 rm kubectl
 
+# Install Helm
+echo "⎈ Installing Helm..."
+curl https://baltocdn.com/helm/signing.asc | gpg --dearmor | sudo tee /usr/share/keyrings/helm.gpg > /dev/null
+sudo apt-get install apt-transport-https --yes
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/helm.gpg] https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list
+sudo apt-get update
+sudo apt-get install helm
+
 # Verify installation
 echo "🔎 Verifying installations..."
 docker --version
 kind --version
 k9s version
 kubectl version --client
+helm version
 
 # Done!
 echo "✅ Installation complete! Please restart your terminal for Docker group changes to take effect."
