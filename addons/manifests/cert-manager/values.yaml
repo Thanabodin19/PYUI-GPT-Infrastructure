@@ -1,11 +1,11 @@
-apiVersion: v2
-name: helm-external-secret
-version: 1.0.0
-appVersion: 1.23.0
-description: A Helm chart wrapper for External Secret
+cert-manager:
+  enabled: true
+  global:
+    leaderElection:
+      namespace: cert-manager
 
-dependencies:
-  - name: external-secrets
-    version: "0.8.1"
-    repository: "https://charts.external-secrets.io"
-    condition: external-secrets.enabled
+  installCRDs: true
+  fullnameOverride: cert-manager
+  extraArgs:
+    - --dns01-recursive-nameservers-only=true
+    - --dns01-recursive-nameservers=8.8.8.8:53
