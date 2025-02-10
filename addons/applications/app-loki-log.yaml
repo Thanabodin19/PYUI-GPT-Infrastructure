@@ -15,7 +15,7 @@ spec:
       project: "default"
       source:
         repoURL: https://github.com/Thanabodin19/PYUI-GPT-Infrastructure.git
-        targetRevision: "{{name}}" #Based on environment
+        targetRevision: main #Based on environment
         path: 'addons/manifests/loki-log'
         helm:
           ignoreMissingValueFiles: true
