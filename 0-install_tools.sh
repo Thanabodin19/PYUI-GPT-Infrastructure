@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e  # หยุดการทำงานทันทีหากเกิดข้อผิดพลาด
+# set -e  # หยุดการทำงานทันทีหากเกิดข้อผิดพลาด
 
 echo "🚀 Starting installation of Docker, KinD, and K9s..."
 
@@ -38,6 +38,20 @@ K9S_VERSION="v0.32.5"
 wget https://github.com/derailed/k9s/releases/download/${K9S_VERSION}/k9s_linux_amd64.deb
 sudo apt install -y ./k9s_linux_amd64.deb
 rm k9s_linux_amd64.deb
+
+# Install kubectl
+echo "☸️ Installing kubectl..."
+KUBECTL_VERSION=$(curl -L -s https://dl.k8s.io/release/stable.txt)
+curl -LO "https://dl.k8s.io/release/${KUBECTL_VERSION}/bin/linux/amd64/kubectl"
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+rm kubectl
+
+# Verify installation
+echo "🔎 Verifying installations..."
+docker --version
+kind --version
+k9s version
+kubectl version --client
 
 # Done!
 echo "✅ Installation complete! Please restart your terminal for Docker group changes to take effect."
