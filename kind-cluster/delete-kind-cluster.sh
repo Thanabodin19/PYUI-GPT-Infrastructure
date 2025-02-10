@@ -15,7 +15,7 @@ then
 fi
 
 # ตรวจสอบว่ามีการระบุชื่อ cluster หรือไม่
-CLUSTER_NAME="PYUI-GPT" # ปรับให้ตรงกับชื่อ cluster ที่ต้องการลบ
+CLUSTER_NAME="pyui_gpt" # ปรับให้ตรงกับชื่อ cluster ที่ต้องการลบ
 if [ ! -z "$1" ]; then
     CLUSTER_NAME=$1
 fi
