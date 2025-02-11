@@ -21,7 +21,7 @@ spec:
           ignoreMissingValueFiles: true
           valueFiles:
             - values.yaml
-            - values-{{name}}.yaml
+            - values-production.yaml
       destination:
         name: in-cluster
         namespace: argocd
