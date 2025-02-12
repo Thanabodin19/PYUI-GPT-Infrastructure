@@ -1,0 +1,6 @@
+loki:
+  auth_enabled: false
+  storage:
+    type: filesystem
+  service:
+    type: ClusterIP

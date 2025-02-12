@@ -1,0 +1,10 @@
+server:
+  enabled: true
+  persistentVolume:
+    enabled: false
+  service:
+    type: ClusterIP
+alertmanager:
+  enabled: false
+pushgateway:
+  enabled: false
