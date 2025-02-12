@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   destination:
-    namespace: logging
+    namespace: monitoring
     server: https://kubernetes.default.svc
   source:
     repoURL: https://github.com/Thanabodin19/PYUI-GPT-Infrastructure.git
