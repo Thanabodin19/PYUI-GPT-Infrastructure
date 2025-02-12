@@ -1,8 +1,0 @@
-server:
-  global:
-    scrape_interval: 15s
-  alerting:
-    alertmanagers:
-      - static_configs:
-          - targets:
-            - alertmanager.monitoring.svc:9093

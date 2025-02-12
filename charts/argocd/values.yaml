@@ -1,7 +1,0 @@
-server:
-  service:
-    type: LoadBalancer
-  ingress:
-    enabled: true
-    hosts:
-      - argocd.example.com
