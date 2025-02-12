@@ -6,6 +6,7 @@
 - KinD (Kubernetes in Docker) 🪼
 - k9s 🐶
 - kubectl ☸️
+- helm ⎈
 
 ```bash
 ./0-install_tools.sh
@@ -22,4 +23,8 @@
 ./1-create_cluster.sh
 ```
 
+create .env from .env-template
+```bash
+cp .env-template  .env
+```
 

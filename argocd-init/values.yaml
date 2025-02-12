@@ -1,7 +1,0 @@
----
-argo-cd:
-  fullnameOverride: argocd
-  dex: {}
-  server:  
-    config:
-      url: https://github.com/its-software-services-customers/p2w-epeagle-addons.git

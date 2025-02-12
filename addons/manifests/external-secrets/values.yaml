@@ -1,3 +1,0 @@
-external-secrets:
-  enabled: true
-  fullnameOverride: external-secrets
