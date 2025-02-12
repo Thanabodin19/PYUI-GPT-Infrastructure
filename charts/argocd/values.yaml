@@ -1,8 +1,7 @@
 server:
-  replicaCount: 1
+  service:
+    type: LoadBalancer
   ingress:
     enabled: true
     hosts:
-      - host: "argocd.local"
-        paths:
-          - "/"
+      - argocd.example.com

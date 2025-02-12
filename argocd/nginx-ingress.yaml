@@ -4,6 +4,7 @@ metadata:
   name: nginx-ingress
   namespace: argocd
 spec:
+  project: default
   destination:
     namespace: ingress-nginx
     server: https://kubernetes.default.svc
@@ -11,6 +12,9 @@ spec:
     repoURL: https://github.com/Thanabodin19/PYUI-GPT-Infrastructure.git
     targetRevision: main
     path: charts/nginx-ingress
+    helm:
+      valueFiles:
+        - charts/nginx-ingress/values.yaml
   syncPolicy:
     automated:
       prune: true

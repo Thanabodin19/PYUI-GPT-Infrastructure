@@ -1,0 +1,4 @@
+apiVersion: v2
+name: metallb
+version: 0.14.4
+description: A Helm chart for MetalLB

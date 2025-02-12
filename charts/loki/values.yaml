@@ -1,6 +1,3 @@
 loki:
-  auth_enabled: false
-  storage:
-    type: filesystem
-  service:
-    type: ClusterIP
+  config:
+    auth_enabled: false

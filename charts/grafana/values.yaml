@@ -1,20 +1,4 @@
-adminUser: admin
-adminPassword: SuperSecureGrafanaPass
-
-persistence:
-  enabled: true
-  storageClass: "standard"
-  size: 5Gi
-
+adminPassword: "admin"
 service:
-  type: ClusterIP
-
-datasources:
-  datasources.yaml:
-    apiVersion: 1
-    datasources:
-      - name: Loki
-        type: loki
-        url: http://loki:3100
-        access: proxy
-        isDefault: true
+  type: LoadBalancer
+  port: 80

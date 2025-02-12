@@ -4,6 +4,7 @@ metadata:
   name: loki
   namespace: argocd
 spec:
+  project: default
   destination:
     namespace: logging
     server: https://kubernetes.default.svc
@@ -11,6 +12,9 @@ spec:
     repoURL: https://github.com/Thanabodin19/PYUI-GPT-Infrastructure.git
     targetRevision: main
     path: charts/loki
+    helm:
+      valueFiles:
+        - charts/loki/values.yaml
   syncPolicy:
     automated:
       prune: true

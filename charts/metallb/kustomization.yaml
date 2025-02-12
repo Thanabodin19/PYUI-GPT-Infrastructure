@@ -1,3 +1,0 @@
-resources:
-  - https://raw.githubusercontent.com/metallb/metallb/v0.14.4/config/manifests/metallb-native.yaml
-  - metallb-config.yaml
