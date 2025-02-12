@@ -1,0 +1,7 @@
+controller:
+  replicaCount: 2
+  ingressClass: "nginx"
+  service:
+    externalTrafficPolicy: Local
+  metrics:
+    enabled: true

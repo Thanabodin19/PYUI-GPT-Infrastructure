@@ -4,15 +4,14 @@ metadata:
   name: prometheus
   namespace: argocd
 spec:
-  project: default
+  destination:
+    namespace: monitoring
+    server: https://kubernetes.default.svc
   source:
     repoURL: https://github.com/Thanabodin19/PYUI-GPT-Infrastructure.git
     targetRevision: main
     path: charts/prometheus
-  destination:
-    server: https://kubernetes.default.svc
-    namespace: monitoring
   syncPolicy:
     automated:
-      selfHeal: true
       prune: true
+      selfHeal: true

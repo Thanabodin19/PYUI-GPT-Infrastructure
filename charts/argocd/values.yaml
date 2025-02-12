@@ -1,0 +1,8 @@
+server:
+  replicaCount: 1
+  ingress:
+    enabled: true
+    hosts:
+      - host: "argocd.local"
+        paths:
+          - "/"

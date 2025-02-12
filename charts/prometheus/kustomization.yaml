@@ -1,0 +1,2 @@
+resources:
+  - https://github.com/prometheus-operator/kube-prometheus/releases/download/main/kustomization.yaml

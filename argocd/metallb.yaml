@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: loki
+  name: metallb
   namespace: argocd
 spec:
   destination:
-    namespace: logging
+    namespace: metallb-system
     server: https://kubernetes.default.svc
   source:
     repoURL: https://github.com/Thanabodin19/PYUI-GPT-Infrastructure.git
     targetRevision: main
-    path: charts/loki
+    path: charts/metallb
   syncPolicy:
     automated:
       prune: true
