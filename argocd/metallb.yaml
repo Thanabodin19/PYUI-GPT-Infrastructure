@@ -14,7 +14,7 @@ spec:
     path: charts/metallb
     helm:
       valueFiles:
-        - charts/metallb/values.yaml
+        - values.yaml
   syncPolicy:
     automated:
       prune: true

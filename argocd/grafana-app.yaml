@@ -14,7 +14,7 @@ spec:
     path: charts/grafana
     helm:
       valueFiles:
-        - charts/grafana/values.yaml
+        - values.yaml
   syncPolicy:
     automated:
       prune: true

@@ -14,7 +14,7 @@ spec:
     path: charts/nginx-ingress
     helm:
       valueFiles:
-        - charts/nginx-ingress/values.yaml
+        - values.yaml
   syncPolicy:
     automated:
       prune: true

@@ -14,7 +14,7 @@ spec:
     path: charts/prometheus
     helm:
       valueFiles:
-        - charts/prometheus/values.yaml
+        - values.yaml
   syncPolicy:
     automated:
       prune: true
