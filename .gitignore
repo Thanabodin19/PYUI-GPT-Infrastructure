@@ -175,3 +175,6 @@ cython_debug/
 Chart.lock
 .env
 cert
+
+# kubernetes secrets 
+*-secrets.yaml
