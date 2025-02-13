@@ -16,6 +16,6 @@ helm repo update
 # ติดตั้ง Addons ผ่าน Helm
 helm upgrade --install argocd argo-cd/argo-cd  --version 7.8.2 --namespace $ARGOCD_NAMESPACE --create-namespace
 helm upgrade --install kube-prometheus-stack prometheus-community/kube-prometheus-stack --version 69.2.3 --namespace $MONITORING_NAMESPACE --create-namespace
-helm upgrade --install metallb metallb/metallb --version 0.14.9 --version 69.2.3 --namespace $METALLB_NAMESPACE --create-namespace
+# helm upgrade --install metallb metallb/metallb --version 0.14.9 --namespace $METALLB_NAMESPACE --create-namespace
 
 echo "🎉 Addons installation completed!"

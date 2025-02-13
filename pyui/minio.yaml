@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: minio
+  namespace: argocd
+spec:
+  project: default
+  destination:
+    namespace: default
+    server: https://kubernetes.default.svc
+  source:
+    repoURL: https://github.com/Thanabodin19/Test-argucd-deploy.git
+    targetRevision: main
+    path: minio
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
