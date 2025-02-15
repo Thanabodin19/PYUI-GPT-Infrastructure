@@ -68,10 +68,16 @@ Run Scrept Create-Cluster.sh
 kubectl cluster-info --context kind-<name cluster>
 ```
 
-## Loading an Image Into Your Cluster 🚥
+## Loading an Image Into Cluster 🚥
 ```bash
 kind load docker-image <my-custom-image:unique-tag>
 ```
+
+## Prune Image In cluster 👻
+```bash
+./kind-cluster/prune_images.sh
+```
+
 ## Delete KinD Cluster 🔪
 ```bash
 ./kind-cluster/delete-kind-cluster.sh
