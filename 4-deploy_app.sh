@@ -20,6 +20,7 @@ data:
   MONGODB_URI: $(encode_base64 "$MONGODB_URI")
   NEXTAUTH_SECRET: $(encode_base64 "$NEXTAUTH_SECRET")
   NEXTAUTH_URL: $(encode_base64 "$NEXTAUTH_URL")
+  NEXT_PUBLIC_BUCKET_ENDPOINT: $(encode_base64 "$NEXT_PUBLIC_BUCKET_ENDPOINT")
 kind: Secret
 metadata:
   name: pyui-secrets
