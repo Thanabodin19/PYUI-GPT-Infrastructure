@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# ค้นหา CONTAINER ID ของ container ที่มีชื่อขึ้นต้นด้วย "production-"
-CONTAINERS=$(docker ps --filter "name=production-" --format "{{.ID}}")
+# ค้นหา CONTAINER ID ของ container ที่มีชื่อขึ้นต้นด้วย "pyui-gpt-"
+CONTAINERS=$(docker ps --filter "name=pyui-gpt-" --format "{{.ID}}")
 
 # ตรวจสอบว่ามี container ตรงกับเงื่อนไขหรือไม่
 if [ -z "$CONTAINERS" ]; then
-  echo "No containers found with name starting with 'production-'"
+  echo "No containers found with name starting with 'pyui-gpt-'"
   exit 1
 fi
 
