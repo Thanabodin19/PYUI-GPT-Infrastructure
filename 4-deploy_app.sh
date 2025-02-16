@@ -21,6 +21,7 @@ data:
   NEXTAUTH_SECRET: $(encode_base64 "$NEXTAUTH_SECRET")
   NEXTAUTH_URL: $(encode_base64 "$NEXTAUTH_URL")
   NEXT_PUBLIC_BUCKET_ENDPOINT: $(encode_base64 "$NEXT_PUBLIC_BUCKET_ENDPOINT")
+  NEXT_PUBLIC_AIRFLOW_ENDPOINT: $(encode_base64 "$NEXT_PUBLIC_AIRFLOW_ENDPOINT")
 kind: Secret
 metadata:
   name: pyui-secrets
