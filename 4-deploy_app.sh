@@ -20,8 +20,10 @@ data:
   MONGODB_URI: $(encode_base64 "$MONGODB_URI")
   NEXTAUTH_SECRET: $(encode_base64 "$NEXTAUTH_SECRET")
   NEXTAUTH_URL: $(encode_base64 "$NEXTAUTH_URL")
-  NEXT_PUBLIC_BUCKET_ENDPOINT: $(encode_base64 "$NEXT_PUBLIC_BUCKET_ENDPOINT")
+  NEXT_PUBLIC_FASTAPI_ENDPOINT: $(encode_base64 "$NEXT_PUBLIC_FASTAPI_ENDPOINT")
   NEXT_PUBLIC_AIRFLOW_ENDPOINT: $(encode_base64 "$NEXT_PUBLIC_AIRFLOW_ENDPOINT")
+  NEXT_PUBLIC_AIRFLOW_USERNAME: $(encode_base64 "$NEXT_PUBLIC_AIRFLOW_USERNAME")
+  NEXT_PUBLIC_AIRFLOW_PASSWORD: $(encode_base64 "$NEXT_PUBLIC_AIRFLOW_PASSWORD")
 kind: Secret
 metadata:
   name: pyui-secrets
@@ -36,11 +38,12 @@ data:
   MINIO_SECRET_KEY: $(encode_base64 "$MINIO_SECRET_KEY")
   MINIO_ENDPOINT: $(encode_base64 "$MINIO_ENDPOINT")
   MINIO_PORT: $(encode_base64 "$MINIO_PORT")
+  OPENAI_API_KEY: $(encode_base64 "$OPENAI_API_KEY")
+  ANTHROPIC_API_KEY: $(encode_base64 "$ANTHROPIC_API_KEY")
+  TYPHOON_API_KEY: $(encode_base64 "$TYPHOON_API_KEY")
   SECRET_KEY: $(encode_base64 "$SECRET_KEY")
   ALGORITHM: $(encode_base64 "$ALGORITHM")
-  openai_api: $(encode_base64 "$openai_api")
-  ANTHROPIC_API_KEY: $(encode_base64 "$ANTHROPIC_API_KEY")
-  Typhoon_API: $(encode_base64 "$Typhoon_API")
+  HF_MODEL_NAME: $(encode_base64 "$HF_MODEL_NAME")
 EOF
 
 echo "✅ secrets/app-secrets.yaml ถูกสร้างเรียบร้อยแล้ว!"
