@@ -28,5 +28,5 @@ nodes:
           kubeletExtraArgs:
             node-labels: "node=worker-1"
     extraMounts:
-      - hostPath: /home/adminstd/PYUI-GPT-Infrastructure/data
-        containerPath: /
+      - hostPath: /home/adminstd/PYUI-GPT-Infrastructure/data/images
+        containerPath: /var/lib/containerd/images
