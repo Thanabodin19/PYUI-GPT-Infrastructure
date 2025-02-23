@@ -9,7 +9,7 @@ spec:
     namespace: default
     server: https://kubernetes.default.svc
   source:
-    repoURL: https://github.com/Thanabodin19/Test-argucd-deploy.git
+    repoURL: https://github.com/Thanabodin19/PYUI-GPT-Deploy
     targetRevision: main
     path: mongodb
   syncPolicy:
