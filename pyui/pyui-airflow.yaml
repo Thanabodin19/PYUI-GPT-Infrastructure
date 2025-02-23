@@ -11,7 +11,7 @@ spec:
     targetRevision: 1.15.0  
     helm:
       valueFiles:
-        - https://raw.githubusercontent.com/Thanabodin19/PYUI-GPT-Deploy/main/values.yaml
+        - https://raw.githubusercontent.com/Thanabodin19/PYUI-GPT-Deploy/main/airflow/values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: airflow
