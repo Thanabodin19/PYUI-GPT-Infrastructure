@@ -10,15 +10,15 @@ nodes:
           kubeletExtraArgs:
             node-labels: "node=control-plane-1"
     extraMounts:
-      - hostPath: /home/adminstd/PYUI-GPT-Infrastructure/data/images
-        containerPath: /var/lib/containerd/images
+      - hostPath: ./data/images
+        containerPath: 
     extraPortMappings:
-      - containerPort: 80
-        hostPort: 80
-        protocol: TCP
-      - containerPort: 443
-        hostPort: 443
-        protocol: TCP
+      - containerPort: 80  # Ingress HTTP
+        hostPort: 8088
+      - containerPort: 443  # Ingress HTTPS
+        hostPort: 8443
+      - containerPort: 30888  # NodePort สำหรับ WebApp
+        hostPort: 8888
 
   - role: worker
     kubeadmConfigPatches:
@@ -28,5 +28,5 @@ nodes:
           kubeletExtraArgs:
             node-labels: "node=worker-1"
     extraMounts:
-      - hostPath: /home/adminstd/PYUI-GPT-Infrastructure/data/images
-        containerPath: /var/lib/containerd/images
+      - hostPath: ./data/images
+        containerPath: 

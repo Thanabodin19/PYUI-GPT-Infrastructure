@@ -56,3 +56,7 @@ echo "✅ Secrets ถูกสร้างบน Kubernetes cluster แล้ว
 # Deploy App and Api
 kubectl apply -f pyui/pyui-app.yaml
 kubectl apply -f pyui/pyui-api.yaml
+
+# pvc airflow
+kubectl create namespace airflow
+kubectl apply -f pyui/airflow-pvc.yaml

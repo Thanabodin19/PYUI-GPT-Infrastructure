@@ -59,7 +59,7 @@ Fill in all required values in `.env`, except `MINIO_ACCESS_KEY` and `MINIO_SECR
 ### Deploy Database
 - pyui-app
 - pyui-api
-- pyui-data-pipeline
+- pyui-airflow
 ```bash
 ./4-deploy_app.sh
 ```
