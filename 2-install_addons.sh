@@ -1,6 +1,7 @@
 #!/bin/bash
 
 echo "🚀 Installing ArgoCD using Helm..."
+kubectl config use-context kind-pyui-gp
 # เพิ่ม Helm repository 
 helm repo add argo-cd https://argoproj.github.io/argo-helm
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts

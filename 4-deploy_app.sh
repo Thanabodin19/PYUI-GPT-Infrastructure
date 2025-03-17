@@ -50,6 +50,7 @@ EOF
 echo "✅ secrets/app-secrets.yaml ถูกสร้างเรียบร้อยแล้ว!"
 
 # Apply Secret to Kubernetes cluster 
+kubectl config use-context kind-pyui-gpt
 kubectl apply -f secrets/app-secrets.yaml
 
 echo "✅ Secrets ถูกสร้างบน Kubernetes cluster แล้ว!"
