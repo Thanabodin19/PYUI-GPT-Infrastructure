@@ -11,7 +11,7 @@ nodes:
             node-labels: "node=control-plane-1"
     extraMounts:
       - hostPath: ./data/images
-        containerPath: 
+        containerPath: /var/lib/containerd:rw
     extraPortMappings:
       - containerPort: 80  # Ingress HTTP
         hostPort: 8088
@@ -29,4 +29,4 @@ nodes:
             node-labels: "node=worker-1"
     extraMounts:
       - hostPath: ./data/images
-        containerPath: 
+        containerPath: /var/lib/containerd:rw
