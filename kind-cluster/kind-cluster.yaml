@@ -10,8 +10,8 @@ nodes:
           kubeletExtraArgs:
             node-labels: "node=control-plane-1"
     extraMounts:
-      - hostPath: ./data/images
-        containerPath: /var/lib/containerd:rw
+      - hostPath: ./data
+        containerPath: /tmp/data
     extraPortMappings:
       - containerPort: 80  # Ingress HTTP
         hostPort: 8088
@@ -28,5 +28,5 @@ nodes:
           kubeletExtraArgs:
             node-labels: "node=worker-1"
     extraMounts:
-      - hostPath: ./data/images
-        containerPath: /var/lib/containerd:rw
+      - hostPath: ./data
+        containerPath: /tmp/data
