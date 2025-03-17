@@ -44,6 +44,7 @@ data:
   SECRET_KEY: $(encode_base64 "$SECRET_KEY")
   ALGORITHM: $(encode_base64 "$ALGORITHM")
   HF_MODEL_NAME: $(encode_base64 "$HF_MODEL_NAME")
+  MONGODB_API_ENDPOINT: $(encode_base64 "$MONGODB_API_ENDPOINT")
 EOF
 
 echo "✅ secrets/app-secrets.yaml ถูกสร้างเรียบร้อยแล้ว!"
